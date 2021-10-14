@@ -13,9 +13,12 @@ app = flask.Flask(__name__)
 
 MARKET = "US"
 ARTIST_IDS = [
-	"4UXqAaa6dQYAk18Lv7PEgX",  # FOB
-	"3jOstUTkEu2JkjvRdBA5Gu",  # Weezer
-	"7oPftvlwr6VrsViSDV7fJY",  # Green Day
+	#"4UXqAaa6dQYAk18Lv7PEgX",  # FOB
+	#"3jOstUTkEu2JkjvRdBA5Gu",  # Weezer
+	#"7oPftvlwr6VrsViSDV7fJY",  # Green Day
+	"0nmQIMXWTXfhgOBdNzhGOs", #Avenged Sevenfold
+	"7jy3rLJdDQY21OgRLCZ9sD", #Foo Fighters
+	"6XyY86QOPPrYVGvF9ch6wz", #Linkin Park
 ]
 
 @app.route('/')
@@ -36,9 +39,8 @@ def index():
     	genius_url=genius_url
     )
 
-if __name__ == "__main__":
-	app.run(
-		host=os.getenv('IP', '0.0.0.0'),
-		port=int(os.getenv('PORT', 8080)),
-		debug=True
-	)
+app.run(
+	#host=os.getenv('IP', '0.0.0.0'),
+	#port=int(os.getenv('PORT', 8080)),
+	debug=True
+)
