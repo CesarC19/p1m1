@@ -1,0 +1,13 @@
+<html>
+    <link rel="stylesheet" href={{ url_for('static', filename='style.css') }}/>
+    <head>
+        Cesar's Song Explorer
+    </head>
+    <body>
+        <h1>Input Artist ID</h1>
+        <form method="POST" action="/artistSelect">
+            <input type="text" name="artistID" placeholder="artistID">
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>

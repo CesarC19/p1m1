@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script type="text/javascript" src="/static/script.js"></script>
+        <link rel="stylesheet" href={{ url_for('static', filename='style.css') }}/>
+    </head>
+    <body>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class=flashes>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        <h1>Login</h1>
+        <form method="POST" action="/login">
+            <input type="text" name="Username" placeholder="Your Username">
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
